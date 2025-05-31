@@ -18,9 +18,9 @@ def get_events():
         
         # Mock data in case API is not available (for testing)
         if not events:
-            with open("/home/vladimir/Documents/code/history/history-front/test1.md", "r") as file:
+            with open("test1.md", "r") as file:
                 md = file.read()
-            with open("/home/vladimir/Documents/code/history/history-front/test2.md", "r") as file:
+            with open("test2.md", "r") as file:
                 md2 = file.read()
             events = [
                 {
