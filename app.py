@@ -67,7 +67,7 @@ def get_events():
                     "title": "Битва при Толваярви",
                     "place": {
                         "id": 104,
-                        "name": "",
+                        "name": "Озеро Толвоярви",
                         "latitude": 62.28,
                         "longitude": 31.48
                     },
