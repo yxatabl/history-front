@@ -22,6 +22,12 @@ def get_events():
                 md = file.read()
             with open("test2.md", "r") as file:
                 md2 = file.read()
+            with open("test3.md", "r") as file:
+                md3 = file.read()
+            with open("test4.md", "r") as file:
+                md4 = file.read()
+            with open("test5.md", "r") as file:
+                md5 = file.read()
             events = [
                 {
                     "id": 1,
@@ -45,7 +51,39 @@ def get_events():
                     },
                     "markdown": md2 
                 },
-                
+                {
+                    "id": 3,
+                    "title": "Прорыв линии Маннергейма",
+                    "place": {
+                        "id": 103,
+                        "name": "Карельский перешеек",
+                        "latitude": 60.42,
+                        "longitude": 29.99
+                    },
+                    "markdown": md3
+                },
+                {
+                    "id": 4,
+                    "title": "Битва при Толваярви",
+                    "place": {
+                        "id": 104,
+                        "name": "",
+                        "latitude": 62.28,
+                        "longitude": 31.48
+                    },
+                    "markdown": md4
+                },
+                {
+                    "id": 5,
+                    "title": "Майнильский инцидент",
+                    "place": {
+                        "id": 105,
+                        "name": "деревня Майнило",
+                        "latitude": 60.26,
+                        "longitude": 29.84
+                    },
+                    "markdown": md5
+                },
             ]
             
         return jsonify(events)
@@ -53,4 +91,4 @@ def get_events():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
