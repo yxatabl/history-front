@@ -18,27 +18,21 @@ def get_events():
         
         # Mock data in case API is not available (for testing)
         if not events:
-            with open("test1.md", "r") as file:
-                md = file.read()
-            with open("test2.md", "r") as file:
-                md2 = file.read()
-            with open("test3.md", "r") as file:
-                md3 = file.read()
-            with open("test4.md", "r") as file:
-                md4 = file.read()
-            with open("test5.md", "r") as file:
-                md5 = file.read()
+            mds = []
+            for i in range(7):
+                with open(f"test{i+1}.md", "r") as file:
+                    mds.append(file.read())
             events = [
                 {
                     "id": 1,
-                    "title": "Битва на тайпале",
+                    "title": "Битва на Тайпале",
                     "place": {
                         "id": 101,
                         "name": "Кексгольмский уезд, Финляндия",
                         "latitude": 61,
                         "longitude": 30.1
                     },
-                    "markdown": md 
+                    "markdown": mds[0]
                 },
                 {
                     "id": 2,
@@ -49,7 +43,7 @@ def get_events():
                         "latitude": 61.77,
                         "longitude": 32.16
                     },
-                    "markdown": md2 
+                    "markdown": mds[1]
                 },
                 {
                     "id": 3,
@@ -60,7 +54,7 @@ def get_events():
                         "latitude": 60.42,
                         "longitude": 29.99
                     },
-                    "markdown": md3
+                    "markdown": mds[2]
                 },
                 {
                     "id": 4,
@@ -71,7 +65,7 @@ def get_events():
                         "latitude": 62.28,
                         "longitude": 31.48
                     },
-                    "markdown": md4
+                    "markdown": mds[3]
                 },
                 {
                     "id": 5,
@@ -82,7 +76,51 @@ def get_events():
                         "latitude": 60.26,
                         "longitude": 29.84
                     },
-                    "markdown": md5
+                    "markdown": mds[4]
+                },
+                {
+                    "id": 6,
+                    "title": "Битва на Раатской дороге",
+                    "place": {
+                        "id": 106,
+                        "name": "Суомосалми",
+                        "latitude": 64.88,
+                        "longitude": 28.91
+                    },
+                    "markdown": mds[5]
+                },
+                {
+                    "id": 7,
+                    "title": "Битва при Салле",
+                    "place": {
+                        "id": 107,
+                        "name": "волость Салла",
+                        "latitude": 66.83,
+                        "longitude": 28.67
+                    },
+                    "markdown": mds[6]
+                },
+                {
+                    "id": 8,
+                    "title": "Битва при Суомуссалми",
+                    "place": {
+                        "id": 108,
+                        "name": "Суомуссалми",
+                        "latitude": 64.88,
+                        "longitude": 28.91
+                    },
+                    "markdown": mds[7]
+                },
+                {
+                    "id": 9,
+                    "title": "Бои в Петсамо",
+                    "place": {
+                        "id": 109,
+                        "name": "Петсамо (сейчас Печенга)",
+                        "latitude": 69.55,
+                        "longitude": 31.20
+                    },
+                    "markdown": mds[8]
                 },
             ]
             
