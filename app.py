@@ -19,7 +19,7 @@ def get_events():
         # Mock data in case API is not available (for testing)
         if not events:
             mds = []
-            for i in range(7):
+            for i in range(9):
                 with open(f"test{i+1}.md", "r") as file:
                     mds.append(file.read())
             events = [
